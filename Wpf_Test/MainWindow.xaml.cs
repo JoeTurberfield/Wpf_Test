@@ -24,5 +24,26 @@ namespace Wpf_Test
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+            {
+                MessageBox.Show("Please enter a First Name", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            
+            if (string.IsNullOrWhiteSpace(txtLastName.Text))
+            {
+                MessageBox.Show("Please enter a Last Name", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            Person person = new Person(txtFirstName.Text, txtLastName.Text);
+
+            MessageBox.Show($"Hello {person.FirstName} {person.LastName}");
+
+            // Add Database access here
+        }
     }
 }

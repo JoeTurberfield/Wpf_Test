@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Test"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" FontWeight="Bold" FontSize="20">
     <Grid>
-
+        <Label x:Name="lblTitle" Content="Test Application" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="37" Width="160"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Margin="45,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontWeight="Normal" FontSize="12" Height="18"/>
+        <Label Content="First Name:" HorizontalAlignment="Left" Margin="45,69,0,0" VerticalAlignment="Top" FontSize="12" Height="26" Width="74"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Margin="45,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="12" FontWeight="Normal" Height="18"/>
+        <Label Content="Last Name:" HorizontalAlignment="Left" Margin="45,123,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Bold" Height="26" Width="73"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="45,0,0,0" VerticalAlignment="Center" FontWeight="Normal" FontSize="12" Width="60" Click="Button_Click" Height="20"/>
     </Grid>
 </Window>
